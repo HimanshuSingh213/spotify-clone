@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    <title>Spotify - Web Player</title>
+    <title>Hindi - Spotify</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hindi.css">
 </head>
 
 <body>
+    <!-- Top Navbar -->
     <div class="navbar">
         <div class="navbar-left">
             <div class="navbar-logo">
@@ -65,7 +67,9 @@
         </div>
     </div>
 
+    <!-- Main Container -->
     <div class="main-container">
+        <!-- Sidebar -->
         <div class="sidebar">
             <div class="library-header">
                 <h2>Your Library</h2>
@@ -84,7 +88,9 @@
                 <div class="card">
                     <h3>Let's find some podcasts to follow</h3>
                     <p>We'll keep you updated on new episodes</p>
-                    <button>Browse podcasts</button>
+                    <a href="browse.html" style="text-decoration: none;">
+                        <button>Browse podcasts</button>
+                    </a>
                 </div>
             </div>
 
@@ -116,356 +122,450 @@
             </div>
         </div>
 
-        <div class="main-content">
-            <!-- Trending Songs -->
+        <!-- Main Content Area -->
+        <div class="main-content genre-content">
+            <!-- Genre Hero Banner -->
+            <div class="genre-hero">
+                <h1 class="genre-title">Hindi</h1>
+            </div>
+
+            <!-- Section 1: Popular Hindi Playlists -->
             <div class="content-section">
                 <div class="section-header">
-                    <h2>Trending songs</h2>
+                    <h2>Popular Hindi Playlists</h2>
                     <a href="#">Show all</a>
                 </div>
 
                 <div class="cards-row">
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02853b24d260cd34f67071f00a" alt="Ashke">
+                            <img src="https://i.scdn.co/image/ab67706f00000002cdb9f3aa5daf93253b072a55" alt="Hot Hits Hindi">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
                         </div>
-                        <h4>Ashke</h4>
-                        <p>Karan Aujla, Mxrci</p>
+                        <h4>Hot Hits Hindi</h4>
+                        <p>Hottest Hindi music that India is listening to....</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e026e9e64025043feb3999aa13b" alt="Alfaaz">
+                            <img src="https://i.scdn.co/image/ab67706f000000029014135c48cd87b6e106cab4" alt="Bollywood Mush">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
                         </div>
-                        <h4>Alfaaz</h4>
-                        <p>Hamza Malik, Zain Zohaib</p>
+                        <h4>Bollywood Mush</h4>
+                        <p>Let these songs be the background score to...</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02a14d6ecc28bacc51e45e2fa9" alt="Casa Tupka Anthemo">
+                            <img src="https://i.scdn.co/image/ab67706f0000000299e454572d0578183d97ecc2" alt="Bollywood Dance Music">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
                         </div>
-                        <h4>Casa Tupka Anthemo</h4>
-                        <p>Yo Yo Honey Singh, Priyanshi Srivastava</p>
+                        <h4>Bollywood Dance Music</h4>
+                        <p>Party-ready, the biggest Bollywood dance...</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02273a676735744dfda37251bd" alt="Ooroda Oththa Don">
+                            <img src="https://i.scdn.co/image/ab67706f00000002885f291ee2d9edd1d17543cc" alt="Trending Valentine's Hits">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
                         </div>
-                        <h4>Ooroda Oththa Don - From "Baththa"</h4>
-                        <p>Sai Abhyankkar, Vangal Pulla Vicky, Thamizh...</p>
+                        <h4>Trending Valentine's Hits</h4>
+                        <p>Gehra Hua, Awarapan, Arz Kiya Hai, & more -...</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e029bd0dc8dedd4e9fe20130c35" alt="Afsaana Banaaya Aapne">
+                            <img src="https://i.scdn.co/image/ab67706f00000002ac5edc3e31371c6040cc9e87" alt="Old is Gold">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
                         </div>
-                        <h4>Afsaana Banaaya Aapne - From...</h4>
-                        <p>Himesh Reshammiya, Asees Kaur</p>
+                        <h4>Old is Gold</h4>
+                        <p>Soulful Hindi songs for your nostalgic journey....</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02f84833b171e52d01cd7936c0" alt="Aaya Sher">
+                            <img src="https://i.scdn.co/image/ab67706f0000000203b72ae3caf435bd1f95fbd5" alt="Bollywood & Chill">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
                         </div>
-                        <h4>Aaya Sher</h4>
-                        <p>Anirudh Ravichander, Jangi Reddy, Arjun...</p>
+                        <h4>Bollywood & Chill</h4>
+                        <p>Sit back, and chill with Bollywood's easygoin...</p>
                     </a>
                 </div>
             </div>
 
-            <!-- Popular Artists -->
+            <!-- Section 2: Editor's Picks: No-Skip Playlists -->
             <div class="content-section">
                 <div class="section-header">
-                    <h2>Popular artists</h2>
+                    <h2>Editor's Picks: No-Skip Playlists</h2>
                     <a href="#">Show all</a>
                 </div>
 
                 <div class="cards-row">
-                    <a href="playlist.html" class="item-card artist-card">
+                    <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="Pritam">
-                        </div>
-                        <h4>Pritam</h4>
-                        <p>Artist</p>
-                    </a>
-
-                    <a href="playlist.html" class="item-card artist-card">
-                        <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c" alt="A.R. Rahman">
-                        </div>
-                        <h4>A.R. Rahman</h4>
-                        <p>Artist</p>
-                    </a>
-
-                    <a href="playlist.html" class="item-card artist-card">
-                        <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616100005174adfb0b2df04b77e43b5f7375" alt="Arijit Singh">
-                        </div>
-                        <h4>Arijit Singh</h4>
-                        <p>Artist</p>
-                    </a>
-
-                    <a href="playlist.html" class="item-card artist-card">
-                        <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616100005174bb4064bef3a825344d5eb79e" alt="Sachin-Jigar">
-                        </div>
-                        <h4>Sachin-Jigar</h4>
-                        <p>Artist</p>
-                    </a>
-
-                    <a href="playlist.html" class="item-card artist-card">
-                        <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab6761610000517490b6c3d093f9b02aad628eaf" alt="Vishal-Shekhar">
-                        </div>
-                        <h4>Vishal-Shekhar</h4>
-                        <p>Artist</p>
-                    </a>
-
-                    <a href="playlist.html" class="item-card artist-card">
-                        <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616100005174c40600e02356cc86f0debe84" alt="Atif Aslam">
+                            <img src="https://i.scdn.co/image/ab67706f00000002cedd32dc1cab0c1fa0aeffa1" alt="Sad Hindi Melodies">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <h4>Atif Aslam</h4>
-                        <p>Artist</p>
+                        <h4>Sad Hindi Melodies</h4>
+                        <p>Soulful tunes for the heart that has loved and lost.</p>
+                    </a>
+
+                    <a href="playlist.html" class="item-card">
+                        <div class="img-box">
+                            <img src="https://i.scdn.co/image/ab67706f000000029b35df1815e036de8c03d372" alt="Madhuri Dixit Hits">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4>Madhuri Dixit Hits</h4>
+                        <p>The moves. The smile. The hits. Her songs that define an era.</p>
+                    </a>
+
+                    <a href="playlist.html" class="item-card">
+                        <div class="img-box">
+                            <img src="https://i.scdn.co/image/ab67706f00000002fa66b7a117911c8123ae2932" alt="90s Sad Bollywood">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4>90s Sad Bollywood</h4>
+                        <p>Soothe your broken heart with these timeless classics.</p>
+                    </a>
+
+                    <a href="playlist.html" class="item-card">
+                        <div class="img-box">
+                            <img src="https://i.scdn.co/image/ab67706f0000000203b72ae3caf435bd1f95fbd5" alt="Bollywood & Chill">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4>Bollywood & Chill</h4>
+                        <p>Sit back, and chill with Bollywood's easygoing hits.</p>
+                    </a>
+
+                    <a href="playlist.html" class="item-card">
+                        <div class="img-box">
+                            <img src="https://i.scdn.co/image/ab67706f000000027ab97440d3f8a52d5e733dbf" alt="1 AM Feels Hindi">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4>1 AM Feels Hindi</h4>
+                        <p>Late night cool, & these soothing tunes.</p>
+                    </a>
+
+                    <a href="playlist.html" class="item-card">
+                        <div class="img-box">
+                            <img src="https://i.scdn.co/image/ab67706f00000002ae6019a493aa48a4410e9ef8" alt="Filmy Covers">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4>Filmy Covers</h4>
+                        <p>Your favourite filmy tracks reimagined with acoustic warmth.</p>
                     </a>
                 </div>
             </div>
 
-            <!-- Popular Albums and Singles -->
+            <!-- Section 3: New & Trending -->
             <div class="content-section">
                 <div class="section-header">
-                    <h2>Popular albums and singles</h2>
+                    <h2>New & Trending</h2>
                     <a href="#">Show all</a>
                 </div>
 
                 <div class="cards-row">
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e026404721c1943d5069f0805f3" alt="Aashiqui 2">
+                            <img src="https://i.scdn.co/image/ab67706f000000023fb92cb3eeb09462b53b6861" alt="New Music Hindi">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <h4>Aashiqui 2</h4>
-                        <p>Mithoon, Ankit Tiwari, Jeet Gannguli</p>
+                        <h4>New Music Hindi</h4>
+                        <p>The freshest Hindi music releases right now.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02707ea5b8023ac77d31756ed4" alt="Yeh Jawaani Hai Deewani">
+                            <img src="https://i.scdn.co/image/ab67706f00000002cdb9f3aa5daf93253b072a55" alt="Hot Hits Hindi">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <h4>Yeh Jawaani Hai Deewani</h4>
-                        <p>Pritam</p>
+                        <h4>Hot Hits Hindi</h4>
+                        <p>The biggest Bollywood & Indian hits taking over the charts.</p>
+                    </a>
+
+                    <!-- Bollywood Central -->
+                    <a href="playlist.html" class="item-card">
+                        <div class="img-box">
+                            <img src="https://i.scdn.co/image/ab67706f00000002fc392f1c1d0f9a1148b9fb8b" alt="Bollywood Central">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4>Bollywood Central</h4>
+                        <p>Bollywood Central, jab baje toh seedha dil ke taar chhu jaye.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02711c1639b4bc0f9978ae77a6" alt="Sanam Teri Kasam">
+                            <img src="https://i.scdn.co/image/ab67706f00000002306a8e5f12ec217633939e2f" alt="New Music Friday I-Pop">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <h4>Sanam Teri Kasam (Original Motion...</h4>
-                        <p>Himesh Reshammiya, Sameer Anjaan, Subrat...</p>
+                        <h4>New Music Friday I-Pop</h4>
+                        <p>Catch the newest Friday releases across Indian pop music.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02292341cd3e621d7f9171331f" alt="Finding Her">
+                            <img src="https://i.scdn.co/image/ab67706f000000028dba22f4fcf344c0f8773d5c" alt="New in Dance">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <h4>Finding Her</h4>
-                        <p>Kushagra, Bharath, Saaheal</p>
+                        <h4>New in Dance</h4>
+                        <p>High energy, dance-floor ready Bollywood beats.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02a5183fa4b99bcec1f506418d" alt="Young G.O.A.T">
+                            <img src="https://i.scdn.co/image/ab67706f0000000257afc3a38e5a1d9830aac6c9" alt="Latest Love Tunes">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <h4>Young G.O.A.T</h4>
-                        <p>Cheema Y, Gur Sidhu</p>
-                    </a>
-
-                    <a href="playlist.html" class="item-card">
-                        <div class="img-box">
-                            <img src="https://i.scdn.co/image/ab67616d00001e02773c5f60bcb309ef8802e4ef" alt="Raanjhan">
-                            <button class="play-btn">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
-                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <h4>Raanjhan (From "Do Patti")</h4>
-                        <p>Sachet-Parampara, Parampara Tandon, Kau...</p>
+                        <h4>Latest Love Tunes</h4>
+                        <p>Romantic melodies that make every moment special.</p>
                     </a>
                 </div>
             </div>
 
-            <!-- Popular Radio -->
+            <!-- Section 4: Aartis & Bhajans -->
             <div class="content-section">
                 <div class="section-header">
-                    <h2>Popular radio</h2>
+                    <h2>Aartis & Bhajans</h2>
                     <a href="#">Show all</a>
                 </div>
 
                 <div class="cards-row">
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4YRxDV8wJFPHPTeXepOstw/en" alt="Arijit Singh Radio">
+                            <img src="https://i.scdn.co/image/ab67706f00000002fa5357e4dcb60e04b82b29f0" alt="Om Namah Shivay">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <p>With Jeet Gannguli, Pritam, Shaarib Toshi and more</p>
-                    </a>
-
-                    <a href="playlist.html" class="item-card">
-                        <div class="img-box" style="background-color: #4a756e;">
-                            <svg viewBox="0 0 24 24" width="54" height="54" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 18V5l12-2v13"></path>
-                                <circle cx="6" cy="18" r="3"></circle>
-                                <circle cx="18" cy="16" r="3"></circle>
-                            </svg>
-                            <button class="play-btn">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
-                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <p>With Pritam, Roop Kumar Rathod, Vishal-Shekhar and more</p>
+                        <h4>Om Namah Shivay</h4>
+                        <p>Stay blessed with these divine tunes in praise of Mahadev.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/0oOet2f43PA68X5RxKobEy/en" alt="Shreya Ghoshal Radio">
+                            <img src="https://i.scdn.co/image/ab67706f000000026728cee25b716f2538bb0c2c" alt="Jai Shree Ram">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <p>With A.R. Rahman, Vishal-Shekhar, Atif Aslam and more</p>
+                        <h4>Jai Shree Ram</h4>
+                        <p>Revel in the sweet sounds of devotion with Prabhu Ram bhajans.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/3gBKY0y3dFFVRqicLnVZYz/en" alt="Alka Yagnik Radio">
+                            <img src="https://i.scdn.co/image/ab67706f0000000210a0549e97ea59a8e2190ef2" alt="Aartis & Bhajans">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <p>With Vinod Rathod, Kumar Sanu, Jatin-Lalit and more</p>
+                        <h4>Aartis & Bhajans</h4>
+                        <p>Celebrate your devotion, gratitude and peaceful morning rituals.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/2FKWNmZWDBZR4dE5KX4plR/en" alt="Diljit Dosanjh Radio">
+                            <img src="https://i.scdn.co/image/ab67706f00000002ae664f303e74a1700762bca8" alt="Hare Krishna">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <p>With Karan Aujla, Harrdy Sandhu, Sidhu Moose Wala and more</p>
+                        <h4>Hare Krishna</h4>
+                        <p>Blissful aartis, bhajans & songs to sing praises to Krishna.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/1mYsTxnqsietFxj1OgoGbG/en" alt="A.R. Rahman Radio">
+                            <img src="https://i.scdn.co/image/ab67706f00000002be92175e619d43a53b449d42" alt="Ganpati Bappa Moreya">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <p>With Hariharan, Chinmayi, Anirudh Ravichander and more</p>
+                        <h4>Ganpati Bappa Moreya</h4>
+                        <p>Sweet sounds of devotion to praise Lord Ganesha.</p>
+                    </a>
+
+                    <a href="playlist.html" class="item-card">
+                        <div class="img-box">
+                            <img src="https://i.scdn.co/image/ab67706f00000002e2ea3e81b4294359f8e46932" alt="Mata Ka Darbaar">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4>Mata Ka Darbaar</h4>
+                        <p>Worship the Goddess of love and devotion with sacred chants.</p>
                     </a>
                 </div>
             </div>
 
-            <!-- Featured Charts -->
+            <!-- Section 5: Bollywood and Genres -->
             <div class="content-section">
                 <div class="section-header">
-                    <h2>Featured Charts</h2>
+                    <h2>Bollywood and Genres</h2>
                     <a href="#">Show all</a>
                 </div>
 
                 <div class="cards-row">
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg" alt="Top Songs Global">
+                            <img src="https://i.scdn.co/image/ab67706f000000022285b7dbbc14392e9b2568ef" alt="Bollywood Rock">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <p>Your weekly update of the most played tracks right now - Global.</p>
+                        <h4>Bollywood Rock</h4>
+                        <p>Listen to what Bollywood is rocking to right now.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_in_default.jpg" alt="Top Songs India">
+                            <img src="https://i.scdn.co/image/ab67706f000000029014135c48cd87b6e106cab4" alt="Bollywood Mush">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <p>Your weekly update of the most played tracks right now - India.</p>
+                        <h4>Bollywood Mush</h4>
+                        <p>Let these songs be the background score to your love story.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg" alt="Top 50 Global">
+                            <img src="https://i.scdn.co/image/ab67706f0000000299e454572d0578183d97ecc2" alt="Bollywood Dance">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <p>Your daily update of the most played tracks right now - Global.</p>
+                        <h4>Bollywood Dance</h4>
+                        <p>Party-ready, the biggest Bollywood dance tracks ever.</p>
                     </a>
 
                     <a href="playlist.html" class="item-card">
                         <div class="img-box">
-                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_default.jpg" alt="Top 50 India">
+                            <img src="https://i.scdn.co/image/ab67706f000000022d44c9ca4a6f5327e044e70d" alt="Bollywood Acoustic">
                             <button class="play-btn">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
                                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <p>Your daily update of the most played tracks right now - India.</p>
+                        <h4>Bollywood Acoustic</h4>
+                        <p>Tender, thoughtful & stripped down versions of Hindi hits.</p>
+                    </a>
+
+                    <a href="playlist.html" class="item-card">
+                        <div class="img-box">
+                            <img src="https://i.scdn.co/image/ab67706f00000002fc392f1c1d0f9a1148b9fb8b" alt="Bollywood Central">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4>Bollywood Central</h4>
+                        <p>Bollywood Central, jab baje toh seedha dil ke taar chhu jaye.</p>
+                    </a>
+
+                    <a href="playlist.html" class="item-card">
+                        <div class="img-box">
+                            <img src="https://i.scdn.co/image/ab67706f00000002864dc5d361e61dbcade81b03" alt="Filmi Ghazals">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4>Filmi Ghazals</h4>
+                        <p>True blue poetry. Let these Bollywood ghazals soothe you.</p>
                     </a>
                 </div>
             </div>

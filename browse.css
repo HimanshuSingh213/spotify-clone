@@ -1,0 +1,62 @@
+/* Browse page styles */
+
+.main-content.browse-content {
+    background-image: none;
+}
+
+.browse-heading {
+    font-family: 'Spotify Mix UI Title', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.browse-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.browse-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.browse-card h3 {
+    font-family: 'Spotify Mix UI Title', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1.1;
+    max-width: 65%;
+    word-break: break-word;
+}
+
+.browse-card img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transform: rotate(25deg) translate(18%, -2%);
+    box-shadow: 0 4px 10px #00000040;
+    border-radius: 4px;
+}
+
+@media (max-width: 1100px) {
+    .browse-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

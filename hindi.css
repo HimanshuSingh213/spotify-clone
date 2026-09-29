@@ -1,0 +1,19 @@
+/* Hindi page styles */
+
+.main-content.genre-content {
+    background-image: linear-gradient(180deg, #04604e 0%, #121212 400px);
+}
+
+.genre-hero {
+    padding: 36px 0 32px 0;
+}
+
+.genre-title {
+    font-family: 'Spotify Mix UI Title', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin: 0;
+}

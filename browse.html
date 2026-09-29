@@ -1,12 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="referrer" content="no-referrer">
+    <title>Spotify - Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="browse.css">
 </head>
+
 <body>
-    
-    
+    <!-- Top Navbar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.496 17.306c-.216.353-.674.466-1.027.25-2.813-1.718-6.354-2.107-10.526-1.155-.404.092-.81-.161-.902-.565-.092-.403.161-.81.565-.902 4.568-1.044 8.49-.606 11.64 1.345.353.216.466.674.25 1.027zm1.465-3.26c-.272.443-.852.585-1.295.313-3.22-1.978-8.127-2.55-11.935-1.393-.498.151-1.027-.133-1.178-.63-.151-.498.133-1.028.63-1.179 4.356-1.322 9.776-.682 13.465 1.593.443.272.586.852.313 1.296zm.126-3.41c-3.86-2.292-10.226-2.503-13.896-1.388-.592.18-1.222-.154-1.402-.746-.18-.592.154-1.222.746-1.402 4.223-1.282 11.25-1.037 15.688 1.596.533.316.707 1.006.391 1.539-.316.532-1.006.706-1.527.401z" />
+                    </svg>
+                </a>
+            </div>
+
+            <a href="index.html" class="home-btn" title="Home">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+                    <path d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
+                </svg>
+            </a>
+
+            <div class="search-bar active">
+                <div class="search-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.279-9.407-9.279zm-7.407 9.279c0-4.006 3.302-7.279 7.407-7.279s7.407 3.273 7.407 7.279-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.279z"></path>
+                    </svg>
+                </div>
+                <input type="text" placeholder="What do you want to play?" autofocus>
+                <div class="search-divider"></div>
+                <a href="browse.html" class="browse-btn" title="Browse">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M15 15.5c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"></path>
+                        <path d="M1.513 9.37A1 1 0 0 1 2.291 9h19.418a1 1 0 0 1 .979 1.208l-2.339 11a1 1 0 0 1-.978.792H4.63a1 1 0 0 1-.978-.792l-2.339-11a1 1 0 0 1 .201-.838zM3.578 11l1.911 9h13.022l1.911-9H3.578zM20 6.5a1 1 0 0 1-1 1H5a1 1 0 0 1 0-2h14a1 1 0 0 1 1 1z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar-right">
+            <div class="nav-links">
+                <a href="#">Premium</a>
+                <a href="#">Support</a>
+                <a href="#">Download</a>
+            </div>
+
+            <div class="nav-divider"></div>
+
+            <a href="#" class="install-app-btn">
+                <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                    <path d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.81 4.995 9.805a.75.75 0 0 1 0-1.06z"></path>
+                    <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"></path>
+                </svg>
+                <span>Install App</span>
+            </a>
+
+            <button class="signup-btn">Sign up</button>
+            <button class="login-btn">Log in</button>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="library-header">
+                <h2>Your Library</h2>
+                <button class="create-btn">
+                    <span>+</span> Create
+                </button>
+            </div>
+
+            <div class="library-cards">
+                <div class="card">
+                    <h3>Create your first playlist</h3>
+                    <p>It's easy, we'll help you</p>
+                    <button>Create playlist</button>
+                </div>
+
+                <div class="card">
+                    <h3>Let's find some podcasts to follow</h3>
+                    <p>We'll keep you updated on new episodes</p>
+                    <button>Browse podcasts</button>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="footer-links">
+                    <div class="footer-links-row">
+                        <a href="#">Legal</a>
+                        <a href="#">Safety & Privacy Center</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                    <div class="footer-links-row">
+                        <a href="#">About Ads</a>
+                        <a href="#">Accessibility</a>
+                    </div>
+                    <div class="footer-links-row">
+                        <a href="#" class="cookie-white">Cookies</a>
+                    </div>
+                </div>
+
+                <button class="lang-btn">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                        <path d="M2 12h20" />
+                    </svg>
+                    <span>English</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content browse-content">
+            <h2 class="browse-heading">Browse all</h2>
+
+            <div class="browse-grid">
+                <!-- Music -->
+                <a href="hindi.html" class="browse-card" style="background-color: #dc148c;">
+                    <h3>Music</h3>
+                    <img src="https://i.scdn.co/image/ab67706f0000000209dec89719704eea4f218966" alt="Music">
+                </a>
+
+                <!-- Podcasts -->
+                <a href="hindi.html" class="browse-card" style="background-color: #006450;">
+                    <h3>Podcasts</h3>
+                    <img src="https://megaphone.imgix.net/podcasts/f521b120-2c30-11e6-b5f3-63ee984ee1a4/image/e7470287efbfa0aff068175bb6c31805.jpg" alt="Podcasts">
+                </a>
+
+                <!-- Live Events -->
+                <a href="hindi.html" class="browse-card" style="background-color: #8400e7;">
+                    <h3>Live Events</h3>
+                    <img src="https://open.spotifycdn.com/cdn/images/concert-hub-fb-card.441729d4.png" alt="Live Events">
+                </a>
+
+                <!-- Made For You -->
+                <a href="hindi.html" class="browse-card" style="background-color: #1e3264;">
+                    <h3>Made For You</h3>
+                    <img src="https://i.scdn.co/image/ab67706f00000002924e286987e5d22dd006dd8f" alt="Made For You">
+                </a>
+
+                <!-- New Releases -->
+                <a href="hindi.html" class="browse-card" style="background-color: #608108;">
+                    <h3>New Releases</h3>
+                    <img src="https://i.scdn.co/image/ab67706f000000026438ac9bf5ce78840ea3ec3e" alt="New Releases">
+                </a>
+
+                <!-- Rain & Monsoon -->
+                <a href="hindi.html" class="browse-card" style="background-color: #0d73ec;">
+                    <h3>Rain & Monsoon</h3>
+                    <img src="https://i.scdn.co/image/ab67616d00001e02773c5f60bcb309ef8802e4ef" alt="Rain & Monsoon">
+                </a>
+
+                <!-- Hindi -->
+                <a href="hindi.html" class="browse-card" style="background-color: #e1118c;">
+                    <h3>Hindi</h3>
+                    <img src="https://i.scdn.co/image/ab67706f00000002fc392f1c1d0f9a1148b9fb8b" alt="Hindi">
+                </a>
+
+                <!-- Tamil -->
+                <a href="hindi.html" class="browse-card" style="background-color: #d84000;">
+                    <h3>Tamil</h3>
+                    <img src="https://i.scdn.co/image/ab67616d00001e02273a676735744dfda37251bd" alt="Tamil">
+                </a>
+
+                <!-- Love -->
+                <a href="hindi.html" class="browse-card" style="background-color: #dc148c;">
+                    <h3>Love</h3>
+                    <img src="https://i.scdn.co/image/ab67616d00001e02711c1639b4bc0f9978ae77a6" alt="Love">
+                </a>
+
+                <!-- Sleep -->
+                <a href="hindi.html" class="browse-card" style="background-color: #1e3264;">
+                    <h3>Sleep</h3>
+                    <img src="https://i.scdn.co/image/ab67706f00000002cd17d41419faa97069e06c16" alt="Sleep">
+                </a>
+
+                <!-- Trending -->
+                <a href="hindi.html" class="browse-card" style="background-color: #b02897;">
+                    <h3>Trending</h3>
+                    <img src="https://i.scdn.co/image/ab67706f00000002204335eb7d241ef0dbf5c5ad" alt="Trending">
+                </a>
+
+                <!-- Mood -->
+                <a href="hindi.html" class="browse-card" style="background-color: #e1118c;">
+                    <h3>Mood</h3>
+                    <img src="https://i.scdn.co/image/ab67706f000000028191cc41d8585df6170b3e5e" alt="Mood">
+                </a>
+
+                <!-- Party -->
+                <a href="hindi.html" class="browse-card" style="background-color: #8d67ab;">
+                    <h3>Party</h3>
+                    <img src="https://i.scdn.co/image/ab67616d00001e02a14d6ecc28bacc51e45e2fa9" alt="Party">
+                </a>
+
+                <!-- Devotional -->
+                <a href="hindi.html" class="browse-card" style="background-color: #c39687;">
+                    <h3>Devotional</h3>
+                    <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/3gBKY0y3dFFVRqicLnVZYz/en" alt="Devotional">
+                </a>
+
+                <!-- Decades -->
+                <a href="hindi.html" class="browse-card" style="background-color: #a56752;">
+                    <h3>Decades</h3>
+                    <img src="https://i.scdn.co/image/ab67706f000000021eb48d2e1cd771ef1c6abc39" alt="Decades">
+                </a>
+
+                <!-- Hip-Hop -->
+                <a href="hindi.html" class="browse-card" style="background-color: #477d95;">
+                    <h3>Hip-Hop</h3>
+                    <img src="https://i.scdn.co/image/ab67706f000000026f25a0d402c37b865b89b807" alt="Hip-Hop">
+                </a>
+
+                <!-- Dance /Electronic -->
+                <a href="hindi.html" class="browse-card" style="background-color: #477d95;">
+                    <h3>Dance /Electronic</h3>
+                    <img src="https://i.scdn.co/image/ab67706f00000002ecbd6b2ffda265fead96551c" alt="Dance /Electronic">
+                </a>
+
+                <!-- Student -->
+                <a href="hindi.html" class="browse-card" style="background-color: #af2896;">
+                    <h3>Student</h3>
+                    <img src="https://i.scdn.co/image/ab67616d00001e02292341cd3e621d7f9171331f" alt="Student">
+                </a>
+
+                <!-- Chill -->
+                <a href="hindi.html" class="browse-card" style="background-color: #b06239;">
+                    <h3>Chill</h3>
+                    <img src="https://i.scdn.co/image/ab67706f000000020408713c731caaf1f800615a" alt="Chill">
+                </a>
+
+                <!-- Gaming -->
+                <a href="hindi.html" class="browse-card" style="background-color: #e8115b;">
+                    <h3>Gaming</h3>
+                    <img src="https://i.scdn.co/image/ab67706f0000000222029b469518229b8d5dc282" alt="Gaming">
+                </a>
+
+                <!-- K-pop -->
+                <a href="hindi.html" class="browse-card" style="background-color: #e61e32;">
+                    <h3>K-pop</h3>
+                    <img src="https://i.scdn.co/image/ab67706f0000000217652c782684018b9271a3b9" alt="K-pop">
+                </a>
+
+                <!-- Workout Music -->
+                <a href="hindi.html" class="browse-card" style="background-color: #878787;">
+                    <h3>Workout Music</h3>
+                    <img src="https://i.scdn.co/image/ab67706f00000002681908e31127979d43c8dbc6" alt="Workout Music">
+                </a>
+
+                <!-- RADAR -->
+                <a href="hindi.html" class="browse-card" style="background-color: #a56752;">
+                    <h3>RADAR</h3>
+                    <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/2FKWNmZWDBZR4dE5KX4plR/en" alt="RADAR">
+                </a>
+
+                <!-- EQUAL -->
+                <a href="hindi.html" class="browse-card" style="background-color: #148a08;">
+                    <h3>EQUAL</h3>
+                    <img src="https://i.scdn.co/image/ab67706f0000000293cd55098c3ee4922fadec6b" alt="EQUAL">
+                </a>
+            </div>
+
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <div class="footer-divider top-divider"></div>
+
+                <div class="footer-top">
+                    <div class="footer-links-group">
+                        <div class="footer-col">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">For the Record</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Communities</h4>
+                            <ul>
+                                <li><a href="#">For Artists</a></li>
+                                <li><a href="#">For Creators</a></li>
+                                <li><a href="#">For Authors</a></li>
+                                <li><a href="#">Developers</a></li>
+                                <li><a href="#">Advertising</a></li>
+                                <li><a href="#">Investors</a></li>
+                                <li><a href="#">Vendors</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Useful links</h4>
+                            <ul>
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Free Mobile App</a></li>
+                                <li><a href="#">Popular by Country</a></li>
+                                <li><a href="#">Top Song Lyrics</a></li>
+                                <li><a href="#">Import your music</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Spotify Plans</h4>
+                            <ul>
+                                <li><a href="#">Premium Standard</a></li>
+                                <li><a href="#">Premium Platinum</a></li>
+                                <li><a href="#">Premium Student</a></li>
+                                <li><a href="#">Spotify Free</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="#" class="social-btn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2026 Spotify AB</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Bottom Preview Banner -->
+    <div class="preview-banner">
+        <div class="banner-text">
+            <h4>Preview of Spotify</h4>
+            <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+        </div>
+        <button class="banner-btn">Sign up free</button>
+    </div>
 </body>
+
 </html>

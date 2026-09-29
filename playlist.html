@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Bollywood Central - Playlist by Spotify | Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="playlist.css">
+</head>
+
+<body>
+    <!-- Top Navbar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.496 17.306c-.216.353-.674.466-1.027.25-2.813-1.718-6.354-2.107-10.526-1.155-.404.092-.81-.161-.902-.565-.092-.403.161-.81.565-.902 4.568-1.044 8.49-.606 11.64 1.345.353.216.466.674.25 1.027zm1.465-3.26c-.272.443-.852.585-1.295.313-3.22-1.978-8.127-2.55-11.935-1.393-.498.151-1.027-.133-1.178-.63-.151-.498.133-1.028.63-1.179 4.356-1.322 9.776-.682 13.465 1.593.443.272.586.852.313 1.296zm.126-3.41c-3.86-2.292-10.226-2.503-13.896-1.388-.592.18-1.222-.154-1.402-.746-.18-.592.154-1.222.746-1.402 4.223-1.282 11.25-1.037 15.688 1.596.533.316.707 1.006.391 1.539-.316.532-1.006.706-1.527.401z" />
+                    </svg>
+                </a>
+            </div>
+
+            <a href="index.html" class="home-btn" title="Home">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+                    <path d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
+                </svg>
+            </a>
+
+            <div class="search-bar">
+                <div class="search-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.279-9.407-9.279zm-7.407 9.279c0-4.006 3.302-7.279 7.407-7.279s7.407 3.273 7.407 7.279-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.279z"></path>
+                    </svg>
+                </div>
+                <input type="text" placeholder="What do you want to play?" onclick="window.location.href='browse.html'">
+                <div class="search-divider"></div>
+                <a href="browse.html" class="browse-btn" title="Browse">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M15 15.5c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"></path>
+                        <path d="M1.513 9.37A1 1 0 0 1 2.291 9h19.418a1 1 0 0 1 .979 1.208l-2.339 11a1 1 0 0 1-.978.792H4.63a1 1 0 0 1-.978-.792l-2.339-11a1 1 0 0 1 .201-.838zM3.578 11l1.911 9h13.022l1.911-9H3.578zM20 6.5a1 1 0 0 1-1 1H5a1 1 0 0 1 0-2h14a1 1 0 0 1 1 1z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar-right">
+            <div class="nav-links">
+                <a href="#">Premium</a>
+                <a href="#">Support</a>
+                <a href="#">Download</a>
+            </div>
+
+            <div class="nav-divider"></div>
+
+            <a href="#" class="install-app-btn">
+                <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                    <path d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.81 4.995 9.805a.75.75 0 0 1 0-1.06z"></path>
+                    <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"></path>
+                </svg>
+                <span>Install App</span>
+            </a>
+
+            <button class="signup-btn">Sign up</button>
+            <button class="login-btn">Log in</button>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="library-header">
+                <h2>Your Library</h2>
+                <button class="create-btn">
+                    <span>+</span> Create
+                </button>
+            </div>
+
+            <div class="library-cards">
+                <div class="card">
+                    <h3>Create your first playlist</h3>
+                    <p>It's easy, we'll help you</p>
+                    <button>Create playlist</button>
+                </div>
+
+                <div class="card">
+                    <h3>Let's find some podcasts to follow</h3>
+                    <p>We'll keep you updated on new episodes</p>
+                    <a href="browse.html" style="text-decoration: none;">
+                        <button>Browse podcasts</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="footer-links">
+                    <div class="footer-links-row">
+                        <a href="#">Legal</a>
+                        <a href="#">Safety & Privacy Center</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                    <div class="footer-links-row">
+                        <a href="#">About Ads</a>
+                        <a href="#">Accessibility</a>
+                    </div>
+                    <div class="footer-links-row">
+                        <a href="#" class="cookie-white">Cookies</a>
+                    </div>
+                </div>
+
+                <button class="lang-btn">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                        <path d="M2 12h20" />
+                    </svg>
+                    <span>English</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content playlist-content">
+            <!-- Playlist Header -->
+            <div class="playlist-header">
+                <img class="playlist-cover" src="https://i.scdn.co/image/ab67706f00000002fc392f1c1d0f9a1148b9fb8b" alt="Bollywood Central">
+                <div class="playlist-info">
+                    <span class="playlist-type">Public Playlist</span>
+                    <h1 class="playlist-title">Bollywood Central</h1>
+                    <p class="playlist-description">Bollywood Central, jab baje toh seedha dil ke taar chhu jaye.</p>
+                    <div class="playlist-meta">
+                        <span class="meta-brand">Spotify</span>
+                        <span class="meta-dot">&bull;</span>
+                        <span>14,892,300 saves</span>
+                        <span class="meta-dot">&bull;</span>
+                        <span class="meta-secondary">10 songs, about 42 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Bar -->
+            <div class="playlist-actions">
+                <button class="play-circle-btn" title="Play">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="black">
+                        <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                    </svg>
+                </button>
+
+                <button class="action-icon-btn" title="Save to Your Library">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 8v8M8 12h8" />
+                    </svg>
+                </button>
+
+                <button class="action-icon-btn" title="More options">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                        <circle cx="5" cy="12" r="2" />
+                        <circle cx="12" cy="12" r="2" />
+                        <circle cx="19" cy="12" r="2" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Tracklist Table -->
+            <table class="tracklist-table">
+                <thead>
+                    <tr>
+                        <th class="col-num">#</th>
+                        <th>Title</th>
+                        <th>Album</th>
+                        <th class="col-dur">
+                            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                                <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                                <path d="M8 3.25a.75.75 0 0 1 .75.75v3.25H11a.75.75 0 0 1 0 1.5H7.25V4A.75.75 0 0 1 8 3.25z" />
+                            </svg>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Track 1 -->
+                    <tr class="track-row">
+                        <td class="track-num">1</td>
+                        <td>
+                            <div class="track-info-cell">
+                                <img src="https://i.scdn.co/image/ab67616100005174bb4064bef3a825344d5eb79e" alt="Apna Bana Le" class="track-thumb">
+                                <div class="track-text">
+                                    <a href="#" class="track-name">Apna Bana Le</a>
+                                    <a href="#" class="track-artist">Arijit Singh, Sachin-Jigar</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="track-album">Bhediya</td>
+                        <td class="track-duration">4:21</td>
+                    </tr>
+
+                    <!-- Track 2 -->
+                    <tr class="track-row">
+                        <td class="track-num">2</td>
+                        <td>
+                            <div class="track-info-cell">
+                                <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="Kesariya" class="track-thumb">
+                                <div class="track-text">
+                                    <a href="#" class="track-name">Kesariya</a>
+                                    <a href="#" class="track-artist">Arijit Singh, Pritam</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="track-album">Brahmāstra</td>
+                        <td class="track-duration">4:28</td>
+                    </tr>
+
+                    <!-- Track 3 -->
+                    <tr class="track-row">
+                        <td class="track-num">3</td>
+                        <td>
+                            <div class="track-info-cell">
+                                <img src="https://i.scdn.co/image/ab67616d00001e026404721c1943d5069f0805f3" alt="Tum Hi Ho" class="track-thumb">
+                                <div class="track-text">
+                                    <a href="#" class="track-name">Tum Hi Ho</a>
+                                    <a href="#" class="track-artist">Arijit Singh, Mithoon</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="track-album">Aashiqui 2</td>
+                        <td class="track-duration">4:22</td>
+                    </tr>
+
+                    <!-- Track 4 -->
+                    <tr class="track-row">
+                        <td class="track-num">4</td>
+                        <td>
+                            <div class="track-info-cell">
+                                <img src="https://i.scdn.co/image/ab67616100005174adfb0b2df04b77e43b5f7375" alt="Channa Mereya" class="track-thumb">
+                                <div class="track-text">
+                                    <a href="#" class="track-name">Channa Mereya</a>
+                                    <a href="#" class="track-artist">Arijit Singh, Pritam</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="track-album">Ae Dil Hai Mushkil</td>
+                        <td class="track-duration">4:49</td>
+                    </tr>
+
+                    <!-- Track 5 -->
+                    <tr class="track-row">
+                        <td class="track-num">5</td>
+                        <td>
+                            <div class="track-info-cell">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02711c1639b4bc0f9978ae77a6" alt="Raataan Lambiyan" class="track-thumb">
+                                <div class="track-text">
+                                    <a href="#" class="track-name">Raataan Lambiyan</a>
+                                    <a href="#" class="track-artist">Jubin Nautiyal, Asees Kaur</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="track-album">Shershaah</td>
+                        <td class="track-duration">3:50</td>
+                    </tr>
+
+                    <!-- Track 6 -->
+                    <tr class="track-row">
+                        <td class="track-num">6</td>
+                        <td>
+                            <div class="track-info-cell">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02292341cd3e621d7f9171331f" alt="O Maahi" class="track-thumb">
+                                <div class="track-text">
+                                    <a href="#" class="track-name">O Maahi</a>
+                                    <a href="#" class="track-artist">Arijit Singh, Pritam</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="track-album">Dunki</td>
+                        <td class="track-duration">3:53</td>
+                    </tr>
+
+                    <!-- Track 7 -->
+                    <tr class="track-row">
+                        <td class="track-num">7</td>
+                        <td>
+                            <div class="track-info-cell">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02853b24d260cd34f67071f00a" alt="Heeriye" class="track-thumb">
+                                <div class="track-text">
+                                    <a href="#" class="track-name">Heeriye</a>
+                                    <a href="#" class="track-artist">Jasleen Royal, Arijit Singh</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="track-album">Heeriye</td>
+                        <td class="track-duration">3:14</td>
+                    </tr>
+
+                    <!-- Track 8 -->
+                    <tr class="track-row">
+                        <td class="track-num">8</td>
+                        <td>
+                            <div class="track-info-cell">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02707ea5b8023ac77d31756ed4" alt="Kabira" class="track-thumb">
+                                <div class="track-text">
+                                    <a href="#" class="track-name">Kabira</a>
+                                    <a href="#" class="track-artist">Tochi Raina, Rekha Bhardwaj</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="track-album">Yeh Jawaani Hai Deewani</td>
+                        <td class="track-duration">3:43</td>
+                    </tr>
+
+                    <!-- Track 9 -->
+                    <tr class="track-row">
+                        <td class="track-num">9</td>
+                        <td>
+                            <div class="track-info-cell">
+                                <img src="https://i.scdn.co/image/ab67616d00001e026e9e64025043feb3999aa13b" alt="Shayad" class="track-thumb">
+                                <div class="track-text">
+                                    <a href="#" class="track-name">Shayad</a>
+                                    <a href="#" class="track-artist">Arijit Singh, Pritam</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="track-album">Love Aaj Kal</td>
+                        <td class="track-duration">4:07</td>
+                    </tr>
+
+                    <!-- Track 10 -->
+                    <tr class="track-row">
+                        <td class="track-num">10</td>
+                        <td>
+                            <div class="track-info-cell">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02773c5f60bcb309ef8802e4ef" alt="Sanam Teri Kasam" class="track-thumb">
+                                <div class="track-text">
+                                    <a href="#" class="track-name">Sanam Teri Kasam</a>
+                                    <a href="#" class="track-artist">Ankit Tiwari, Palak Muchhal</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="track-album">Sanam Teri Kasam</td>
+                        <td class="track-duration">5:14</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <div class="footer-divider top-divider"></div>
+
+                <div class="footer-top">
+                    <div class="footer-links-group">
+                        <div class="footer-col">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">For the Record</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Communities</h4>
+                            <ul>
+                                <li><a href="#">For Artists</a></li>
+                                <li><a href="#">For Creators</a></li>
+                                <li><a href="#">For Authors</a></li>
+                                <li><a href="#">Developers</a></li>
+                                <li><a href="#">Advertising</a></li>
+                                <li><a href="#">Investors</a></li>
+                                <li><a href="#">Vendors</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Useful links</h4>
+                            <ul>
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Free Mobile App</a></li>
+                                <li><a href="#">Popular by Country</a></li>
+                                <li><a href="#">Top Song Lyrics</a></li>
+                                <li><a href="#">Import your music</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Spotify Plans</h4>
+                            <ul>
+                                <li><a href="#">Premium Standard</a></li>
+                                <li><a href="#">Premium Platinum</a></li>
+                                <li><a href="#">Premium Student</a></li>
+                                <li><a href="#">Spotify Free</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="#" class="social-btn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2026 Spotify AB</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Bottom Preview Banner -->
+    <div class="preview-banner">
+        <div class="banner-text">
+            <h4>Preview of Spotify</h4>
+            <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+        </div>
+        <button class="banner-btn">Sign up free</button>
+    </div>
+</body>
+
+</html>
